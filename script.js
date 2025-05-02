@@ -45,3 +45,12 @@ document.addEventListener('mouseup', () => {
   isDragging = false;
   img.style.cursor = 'grab';
 });
+
+function showCategory(category) {
+  const sections = document.querySelectorAll('.gallery-section');
+  sections.forEach(section => {
+    section.style.display = section.classList.contains(category) ? 'flex' : 'none';
+  });
+}
+
+showCategory('interior'); // 默认显示室内
