@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f7f7;
+  background: #f5f5dc;
 }
 
 header {
@@ -73,7 +73,6 @@ header {
   transform: scale(1.05);
 }
 
-/* 响应式设计 */
 @media (max-width: 992px) {
   .gallery-section a {
     flex: 1 1 calc(33.333% - 15px);
@@ -97,7 +96,6 @@ header {
   }
 }
 
-/* 新增的Lightbox居中样式 */
 .lb-outerContainer {
   position: fixed !important;
   top: 50% !important;
@@ -129,7 +127,6 @@ header {
   opacity: 1 !important;
 }
 
-/* 导航按钮调整 */
 .lb-nav {
   position: absolute;
   top: 50%;
@@ -142,7 +139,6 @@ header {
   transform: translateY(-50%);
 }
 
-/* 底部信息栏 */
 .lb-dataContainer {
   position: fixed;
   bottom: 0;
@@ -153,13 +149,11 @@ header {
   padding: 10px 0;
 }
 
-/* 关闭按钮 */
 .lb-close {
   position: fixed;
   top: 20px;
   right: 20px;
   opacity: 1 !important;
 }
-
 
 
