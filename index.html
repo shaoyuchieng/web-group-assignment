@@ -2,9 +2,9 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Gallery Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet"/>
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
@@ -68,16 +68,9 @@
     <a href="Amenities/Sauna Room.jpg" data-lightbox="amenity" data-title="Sauna Room"><img src="Amenities/Sauna Room.jpg" alt="Sauna Room"></a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
-  <script>
-    function showCategory(category) {
-      const sections = document.querySelectorAll('.gallery-section');
-      sections.forEach(section => {
-        section.style.display = section.classList.contains(category) ? 'flex' : 'none';
-      });
-    }
-    showCategory('interior'); // 默认显示室内
-  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
