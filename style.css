@@ -42,6 +42,7 @@ header {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  padding-bottom: 50px; 
 }
 
 .gallery-section a {
@@ -155,5 +156,3 @@ header {
   right: 20px;
   opacity: 1 !important;
 }
-
-
