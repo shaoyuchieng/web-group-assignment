@@ -161,21 +161,8 @@ header {
   right: 20px;
   opacity: 1 !important;
 }
-}
 
-.lb-prev {
-  left: 20px !important; /* 距离左边边缘 */
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  position: absolute !important;
-}
 
-.lb-next {
-  right: 20px !important; /* 距离右边边缘 */
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  position: absolute !important;
-}
 
 
 
