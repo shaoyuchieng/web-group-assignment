@@ -98,17 +98,23 @@ header {
   }
 }
 
-/* 关键修改：Lightbox居中样式 */
+/* 新增的Lightbox居中样式 */
 .lb-outerContainer {
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   margin: 0 !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
 }
 
 .lb-container {
   padding: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .lb-image {
@@ -124,6 +130,7 @@ header {
   opacity: 1 !important;
 }
 
+/* 导航按钮调整 */
 .lb-nav {
   position: absolute;
   top: 50%;
@@ -131,6 +138,12 @@ header {
   z-index: 9999;
 }
 
+.lb-prev, .lb-next {
+  opacity: 1 !important;
+  transform: translateY(-50%);
+}
+
+/* 底部信息栏 */
 .lb-dataContainer {
   position: fixed;
   bottom: 0;
@@ -141,10 +154,15 @@ header {
   padding: 10px 0;
 }
 
+/* 关闭按钮 */
 .lb-close {
   position: fixed;
   top: 20px;
   right: 20px;
+  opacity: 1 !important;
 }
+
+/* 保持你原有的其他样式不变 */
+/* ... */
 
 
