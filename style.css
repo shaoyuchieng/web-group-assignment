@@ -144,4 +144,35 @@ header {
   text-align: center;
 }
 
+/* 确保Lightbox容器居中 */
+.lightbox .lb-outerContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 !important;
+}
+
+/* 确保图片容器居中 */
+.lb-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* 确保图片本身居中 */
+.lb-image {
+  max-height: 80vh;
+  max-width: 80vw;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 调整Lightbox覆盖层 */
+.lightboxOverlay {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
 
