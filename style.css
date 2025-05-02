@@ -50,25 +50,5 @@ body {
   cursor: grab;
 }
 
-/* 让 lightbox 中的图片在手机端可以自由缩放和更好填满 */
-@media (max-width: 768px) {
-  .lightbox-content {
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-
-  .lightbox-content img {
-    width: auto !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 100% !important;
-    object-fit: contain;
-    touch-action: pinch-zoom;
-  }
-}
-
-
-
-
 
 
