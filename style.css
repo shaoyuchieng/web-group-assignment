@@ -1,3 +1,4 @@
+/* 基础样式 */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -73,6 +74,7 @@ header {
   transform: scale(1.05);
 }
 
+/* 响应式设计 */
 @media (max-width: 992px) {
   .gallery-section a {
     flex: 1 1 calc(33.333% - 15px);
@@ -96,83 +98,53 @@ header {
   }
 }
 
-
-
-/* Lightbox样式 */
-#lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  margin: auto;
-}
-
-
-
-.lightboxOverlay {
-  background: rgba(0, 0, 0, 0.9) !important;
-  padding: 40px 20px;
-}
-
-.lb-nav a.lb-next,
-.lb-nav a.lb-prev {
-  opacity: 1 !important;
-}
-
-.lb-data .lb-number {
-  display: block !important;
-  font-size: 16px;
-  color: #ddd;
-}
-
-/* 强制居中 Lightbox 弹出的图片 */
-.lb-image {
-  display: block !important;
-  margin: 0 auto !important;
-  max-height: 90vh;
-  max-width: 90vw;
-  object-fit: contain;
-}
-
+/* 关键修改：Lightbox居中样式 */
 .lb-outerContainer {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  height: 100% !important;
-}
-
-.lb-dataContainer {
-  text-align: center;
-}
-
-/* 确保Lightbox容器居中 */
-.lightbox .lb-outerContainer {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
   margin: 0 !important;
 }
 
-/* 确保图片容器居中 */
 .lb-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  padding: 0 !important;
 }
 
-/* 确保图片本身居中 */
 .lb-image {
-  max-height: 80vh;
-  max-width: 80vw;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  max-height: 80vh !important;
+  max-width: 80vw !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
-/* 调整Lightbox覆盖层 */
 .lightboxOverlay {
   background: rgba(0, 0, 0, 0.9) !important;
+  opacity: 1 !important;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.lb-dataContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+}
+
+.lb-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 
