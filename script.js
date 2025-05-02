@@ -6,7 +6,8 @@ lightbox.option({
   'disableScrolling': true,
   'fitImagesInViewport': true,
   'maxWidth': 1200,
-  'maxHeight': 800
+  'maxHeight': 800,
+  'alwaysShowNavOnTouchDevices': true
 });
 
 // 分类显示函数
@@ -20,4 +21,11 @@ function showCategory(category) {
 // 默认显示室内
 document.addEventListener('DOMContentLoaded', function() {
   showCategory('interior');
+  
+  // 修复iOS上的点击延迟
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body);
+    }, false);
+  }
 });
