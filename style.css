@@ -99,70 +99,118 @@ header {
 }
 
 /* 新增的Lightbox居中样式 */
+/* 移除上下白框并调整导航箭头位置 */
 .lb-outerContainer {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  max-width: 90vw !important;
-  max-height: 90vh !important;
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .lb-container {
   padding: 0 !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
 }
 
-.lb-image {
-  max-height: 80vh !important;
-  max-width: 80vw !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-
-.lightboxOverlay {
-  background: rgba(0, 0, 0, 0.9) !important;
-  opacity: 1 !important;
-}
-
-/* 导航按钮调整 */
+/* 导航箭头调整到图片两侧 */
 .lb-nav {
   position: absolute;
-  top: 50%;
+  top: 0;
+  height: 100%;
   width: 100%;
-  z-index: 9999;
+  pointer-events: none;
 }
 
 .lb-prev, .lb-next {
-  opacity: 1 !important;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
+  pointer-events: auto;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s;
+  width: 50px;
+  height: 100px;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 底部信息栏 */
+.lb-prev:hover, .lb-next:hover {
+  opacity: 1 !important;
+  background: rgba(0,0,0,0.5);
+}
+
+.lb-prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.lb-next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.lb-prev::after, .lb-next::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+}
+
+.lb-prev::after {
+  transform: rotate(-45deg);
+  margin-left: 10px;
+}
+
+.lb-next::after {
+  transform: rotate(135deg);
+  margin-right: 10px;
+}
+
+/* 移除顶部和底部的多余空间 */
 .lb-dataContainer {
+  background: transparent !important;
+  padding: 0 !important;
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   right: 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
 }
 
-/* 关闭按钮 */
+.lb-number {
+  display: none !important;
+}
+
+/* 关闭按钮样式调整 */
 .lb-close {
-  position: fixed;
   top: 20px;
   right: 20px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s;
+}
+
+.lb-close:hover {
   opacity: 1 !important;
 }
 
-/* 保持你原有的其他样式不变 */
-/* ... */
+.lb-close::before, .lb-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background: white;
+}
+
+.lb-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lb-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 
 
