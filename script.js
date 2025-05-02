@@ -1,18 +1,15 @@
-// 初始化Lightbox配置
-// 初始化Lightbox配置
 lightbox.option({
   'resizeDuration': 200,
   'wrapAround': true,
-  'positionFromTop': 0,
-  'showImageNumberLabel': false,
+  'positionFromTop': 0,  // 设置为0移除顶部空间
+  'showImageNumberLabel': false,  // 隐藏图片计数
   'disableScrolling': true,
   'fitImagesInViewport': true,
   'maxWidth': 1200,
   'maxHeight': 800,
   'alwaysShowNavOnTouchDevices': true,
-  'albumLabel': ''
+  'albumLabel': ''  // 移除相册标签
 });
-
 
 // 分类显示函数保持不变
 function showCategory(category) {
