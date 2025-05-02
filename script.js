@@ -5,4 +5,4 @@ function showCategory(category) {
   });
 }
 
-showCategory('interior'); // 默认显示室内
+showCategory('interior'); 
